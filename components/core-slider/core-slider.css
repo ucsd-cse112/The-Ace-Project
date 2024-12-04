@@ -1,0 +1,88 @@
+.container {
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+
+input[type=range]::-ms-thumb {
+  z-index: 9999;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  z-index: 9999;
+}
+
+input[type=range]::-moz-range-thumb {
+  z-index: 2;
+}
+
+
+/* The slider itself */
+.slider {
+  position:relative;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 6px; /* Specified height */
+  background: #e4e7ed; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-radius: 3px;
+}
+
+.slider-progress {
+  margin: 0 10px;
+  pointer-events: none;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 6px; /* Specified height */
+  background: #409eff; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  left: 0%;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background-color: #fff;
+  cursor: grab; /* Cursor on hover */
+  border: 2px solid #409eff;
+  border-radius: 50%;
+  z-index: 99999;
+}
+
+#tooltip {
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  position: absolute;
+  margin-top: -30px;
+  background: black;
+  color: white;
+  height: 15px;
+  width: 30px;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
